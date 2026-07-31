@@ -1,0 +1,45 @@
+name: AdvancedCustomSpawners
+version: ${version}
+main: com.example.advancedspawners.AdvancedCustomSpawnersPlugin
+api-version: "1.21"
+authors: ["Codex"]
+description: Advanced custom spawners with upgrades, fuel, internal storage and routed drops.
+softdepend: ["PlaceholderAPI", "Vault"]
+
+commands:
+  spawner:
+    description: Main AdvancedCustomSpawners command.
+    usage: /spawner <give|giveempty|reload|info|link|unlink|remove>
+    aliases: ["customspawner", "acs"]
+
+permissions:
+  advancedspawners.admin:
+    description: Access to all admin commands.
+    default: op
+    children:
+      advancedspawners.give: true
+      advancedspawners.reload: true
+      advancedspawners.info: true
+      advancedspawners.remove: true
+      advancedspawners.bypass: true
+  advancedspawners.use:
+    description: Allows using custom spawner GUIs.
+    default: true
+  advancedspawners.give:
+    description: Allows giving custom spawners and capture eggs.
+    default: op
+  advancedspawners.reload:
+    description: Allows reloading configuration.
+    default: op
+  advancedspawners.info:
+    description: Allows reading custom spawner info.
+    default: op
+  advancedspawners.remove:
+    description: Allows removing custom spawners through GUI or command.
+    default: true
+  advancedspawners.link:
+    description: Allows linking spawners to container blocks.
+    default: true
+  advancedspawners.bypass:
+    description: Bypasses some placement and type restrictions.
+    default: op

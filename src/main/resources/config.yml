@@ -1,0 +1,138 @@
+settings:
+  locale: "pt_BR"
+  internal-storage-max-stacks: 216
+  fallback-when-target-full: "INTERNAL" # INTERNAL, PAUSE, DROP
+  fallback-when-target-missing: "INTERNAL" # INTERNAL, DISABLE
+  max-link-distance: 64
+  save-interval-seconds: 120
+  holograms-enabled: true
+  animations-enabled: true
+  default-mode: "INTERNAL"
+  remove-spawner-returns-stored-items: true
+  economy:
+    enabled: true
+    require-vault: true
+  # Todos os mobs vivos e spawnaveis sao permitidos por padrao.
+  # Adicione aqui apenas os mobs que voce NAO quer permitir.
+  blocked-mobs:
+    - ENDER_DRAGON
+    - WITHER
+    - WARDEN
+
+fuel:
+  consume-per-spawn: 20
+  items:
+    COAL:
+      duration: 1200
+      efficiency: 1.0
+    CHARCOAL:
+      duration: 900
+      efficiency: 1.0
+    BLAZE_ROD:
+      duration: 3600
+      efficiency: 1.25
+    LAVA_BUCKET:
+      duration: 12000
+      efficiency: 1.5
+
+upgrades:
+  speed:
+    max-level: 5
+    costs: [0, 8, 16, 32, 64, 128]
+    min-delay: [200, 160, 120, 90, 65, 45]
+    max-delay: [800, 650, 500, 380, 280, 200]
+  amount:
+    max-level: 5
+    costs: [0, 8, 16, 32, 64, 128]
+    spawn-count: [4, 5, 6, 7, 8, 10]
+  range:
+    max-level: 5
+    costs: [0, 8, 16, 32, 64, 128]
+    player-range: [16, 20, 24, 28, 32, 40]
+  environment:
+    max-level: 1
+    costs: [0, 250]
+  drops:
+    max-level: 5
+    costs: [0, 8, 16, 32, 64, 128]
+    multiplier: [1.0, 1.25, 1.5, 1.75, 2.0, 2.5]
+  xp:
+    max-level: 5
+    costs: [0, 8, 16, 32, 64, 128]
+    multiplier: [1.0, 1.25, 1.5, 1.75, 2.0, 2.5]
+  fuel:
+    max-level: 5
+    costs: [0, 8, 16, 32, 64, 128]
+    consumption-multiplier: [1.0, 0.85, 0.7, 0.55, 0.4, 0.0]
+
+items:
+  spawner:
+    name: "&bSpawner Customizado &7({mob})"
+    lore:
+      - "&7Tipo: &f{mob}"
+      - "&7Use no chao para colocar."
+      - ""
+      - "&bUpgrades:"
+      - "&8- &7Velocidade: &f{speed_level}"
+      - "&8- &7Quantidade: &f{amount_level}"
+      - "&8- &7Alcance: &f{range_level}"
+      - "&8- &7Condicoes: &f{environment_level}"
+      - "&8- &7Drops: &f{drops_level}"
+      - "&8- &7XP: &f{xp_level}"
+      - "&8- &7Combustivel: &f{fuel_level}"
+      - "&7Combustivel salvo: &f{fuel_ticks} ticks"
+      - "&7Estado: &f{enabled}"
+  capture-egg:
+    name: "&eCapturador de Mob &7({mob})"
+    lore:
+      - "&7Clique em um spawner customizado"
+      - "&7para alterar o tipo para &f{mob}&7."
+  empty-capture-egg:
+    name: "&eCapturador de Mob &7(Vazio)"
+    lore:
+      - "&7Clique em um mob permitido"
+      - "&7para captura-lo neste item."
+
+gui:
+  toggle-on:
+    material: LIME_DYE
+    custom-model-data: 0
+  toggle-off:
+    material: GRAY_DYE
+    custom-model-data: 0
+  collect:
+    material: HOPPER
+    custom-model-data: 0
+  link:
+    material: CHAIN
+    custom-model-data: 0
+  unlink:
+    material: BARRIER
+    custom-model-data: 0
+  remove:
+    material: REDSTONE_BLOCK
+    custom-model-data: 0
+  fuel-button:
+    material: BLAZE_POWDER
+    custom-model-data: 0
+  speed:
+    material: SUGAR
+    custom-model-data: 0
+  amount:
+    material: SPAWNER
+    custom-model-data: 0
+  range:
+    material: ENDER_EYE
+    custom-model-data: 0
+  environment:
+    material: COMPASS
+    custom-model-data: 0
+  drops:
+    material: DIAMOND
+    custom-model-data: 0
+  xp:
+    material: EXPERIENCE_BOTTLE
+    custom-model-data: 0
+  fuel:
+    material: LAVA_BUCKET
+    custom-model-data: 0
