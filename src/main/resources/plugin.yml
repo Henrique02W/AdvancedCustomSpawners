@@ -1,8 +1,9 @@
 name: AdvancedCustomSpawners
-version: ${version}
-main: com.example.advancedspawners.AdvancedCustomSpawnersPlugin
-api-version: "1.21"
-authors: ["Codex"]
+version: ${project.version}
+main: io.github.henrique02w.advancedcustomspawners.AdvancedCustomSpawnersPlugin
+api-version: "26.2"
+authors: ["Henrique02W"]
+website: https://github.com/Henrique02W/AdvancedCustomSpawners
 description: Advanced custom spawners with upgrades, fuel, internal storage and routed drops.
 softdepend: ["PlaceholderAPI", "Vault"]
 
@@ -21,6 +22,7 @@ permissions:
       advancedspawners.reload: true
       advancedspawners.info: true
       advancedspawners.remove: true
+      advancedspawners.link: true
       advancedspawners.bypass: true
   advancedspawners.use:
     description: Allows using custom spawner GUIs.

@@ -1,12 +1,14 @@
 # 🐚 AdvancedCustomSpawners
 
-![Licença](https://img.shields.io/badge/licença-Non--Commercial-blue)
-![Status](https://img.shields.io/badge/status-ativo-success)
-![Versão](https://img.shields.io/badge/versão-1.0.0-informational)
-![Java](https://img.shields.io/badge/java-21-orange)
-![Minecraft](https://img.shields.io/badge/minecraft-1.21.8-brightgreen)
+[![Build](https://github.com/Henrique02W/AdvancedCustomSpawners/actions/workflows/build.yml/badge.svg)](https://github.com/Henrique02W/AdvancedCustomSpawners/actions/workflows/build.yml)
+[![Release](https://img.shields.io/github/v/release/Henrique02W/AdvancedCustomSpawners?display_name=tag)](https://github.com/Henrique02W/AdvancedCustomSpawners/releases/latest)
+![Minecraft](https://img.shields.io/badge/minecraft-26.2-brightgreen)
+![Paper](https://img.shields.io/badge/paper-26.2-blue)
+![Java](https://img.shields.io/badge/java-25-orange)
+![Licença](https://img.shields.io/badge/licen%C3%A7a-Non--Commercial-blue)
 ![Vault](https://img.shields.io/badge/economia-Vault-yellow)
-![Contribuições](https://img.shields.io/badge/contribuições-bem--vindas-orange)
+
+🇧🇷 Português · [🇺🇸 English](README.en.md)
 
 > 🐚 Spawners customizados com upgrades, combustível, armazenamento interno e roteamento de drops.
 
@@ -14,20 +16,20 @@
 
 ## 📖 Sobre o Projeto
 
-O **AdvancedCustomSpawners** foi desenvolvido para substituir os spawners vanilla por uma versão muito mais completa: spawners portáteis que podem ser capturados, upgradados, alimentados com combustível, vinculados a containers para envio automático de drops, e controlados via GUI com hologramas e integração de economia.
+O **AdvancedCustomSpawners** substitui os spawners vanilla por uma versão muito mais completa: spawners portáteis que podem ser capturados, melhorados, alimentados com combustível, vinculados a containers para envio automático de drops e controlados via GUI, com hologramas e integração de economia.
 
 O projeto foi pensado para ser:
 
-* Altamente configurável (upgrades, combustíveis, mobs bloqueados, itens da GUI)
-* Flexível no destino dos drops (armazenamento interno ou container vinculado)
-* Integrado ao ecossistema do servidor (Vault, PlaceholderAPI)
+- Altamente configurável (upgrades, combustíveis, mobs bloqueados, itens da GUI)
+- Flexível no destino dos drops (armazenamento interno ou container vinculado)
+- Integrado ao ecossistema do servidor (Vault, PlaceholderAPI)
 
 ---
 
 ## 🛠️ Funcionalidades
 
-* 🥚 **Captura de mobs**: itens capturadores (preenchidos ou vazios) para definir o tipo de mob do spawner
-* ⚙️ **7 upgrades independentes**, cada um com múltiplos níveis e custos configuráveis:
+- 🥚 **Captura de mobs**: itens capturadores (preenchidos ou vazios) para definir o tipo de mob do spawner
+- ⚙️ **7 upgrades independentes**, cada um com múltiplos níveis e custos configuráveis:
   * ⚡ Velocidade (delay mínimo/máximo de spawn)
   * 🔢 Quantidade (mobs por spawn)
   * 📏 Alcance (distância mínima de jogador para ativar)
@@ -35,78 +37,26 @@ O projeto foi pensado para ser:
   * 💎 Drops (multiplicador de itens dropados)
   * ✨ XP (multiplicador de experiência)
   * 🔥 Combustível (redução no consumo)
-* 🔥 **Sistema de combustível**: carvão, carvão vegetal, blaze rod e balde de lava, cada um com duração e eficiência próprias
-* 📦 **Armazenamento interno** de drops, com limite configurável de stacks
-* 🔗 **Vínculo com containers**: roteia os drops automaticamente para um baú (ou outro container) a até uma distância configurável
-* 🔀 **Modos de fallback** configuráveis quando o container alvo está cheio ou ausente (armazenamento interno, pausa, ou drop no chão)
-* 🖼️ **GUI completa** com botão liga/desliga, coleta de itens, vínculo/desvínculo, remoção e upgrades
-* 💡 **Hologramas** exibindo informações do spawner
-* 💰 Integração com **Vault** para custo de upgrades em dinheiro (com fallback para esmeraldas se o Vault não estiver disponível)
-* 🚫 Lista de **mobs bloqueados** configurável (por padrão bloqueia Ender Dragon, Wither e Warden)
-* 📋 Remoção preserva tipo, upgrades e combustível salvo no item devolvido
-* 🧩 Integração opcional com **PlaceholderAPI**
+- 🔥 **Sistema de combustível**: carvão, carvão vegetal, blaze rod e balde de lava, cada um com duração e eficiência próprias
+- 📦 **Armazenamento interno** de drops, com limite configurável de stacks
+- 🔗 **Vínculo com containers**: roteia os drops automaticamente para um baú (ou outro container) a até uma distância configurável
+- 🔀 **Modos de fallback** configuráveis quando o container alvo está cheio ou ausente (armazenamento interno, pausa ou drop no chão)
+- 🖼️ **GUI completa** com botão liga/desliga, coleta de itens, vínculo/desvínculo, remoção e upgrades
+- 💡 **Hologramas** exibindo informações do spawner
+- 💰 Integração com **Vault** para custo de upgrades em dinheiro (com fallback para esmeraldas se o Vault não estiver disponível)
+- 🚫 Lista de **mobs bloqueados** configurável (por padrão bloqueia Ender Dragon, Wither e Warden)
+- 📋 Remoção preserva tipo, upgrades e combustível salvo no item devolvido
+- 🧩 Integração opcional com **PlaceholderAPI**
 
 ---
 
 ## 🧰 Tecnologias Utilizadas
 
-* ☕ Java 21
-* 📦 Maven e Gradle (ambos suportados)
-* 🗺️ Paper 1.21.8
-* 💰 Vault API (economia, opcional)
-* 🧩 PlaceholderAPI (opcional)
-
----
-
-## 📂 Estrutura do Projeto
-
-```bash
-AdvancedCustomSpawners/
-├── src/
-│   └── main/
-│       ├── java/com/example/advancedspawners/
-│       │   ├── AdvancedCustomSpawnersPlugin.java
-│       │   ├── command/
-│       │   │   └── SpawnerCommand.java
-│       │   ├── config/
-│       │   │   └── PluginConfig.java
-│       │   ├── gui/
-│       │   │   ├── GuiListener.java
-│       │   │   ├── GuiManager.java
-│       │   │   └── SpawnerGuiHolder.java
-│       │   ├── hologram/
-│       │   │   └── HologramManager.java
-│       │   ├── integration/
-│       │   │   └── PlaceholderIntegration.java
-│       │   ├── listener/
-│       │   │   └── SpawnerListener.java
-│       │   ├── model/
-│       │   │   ├── BlockLocation.java
-│       │   │   ├── DropMode.java
-│       │   │   ├── FallbackMode.java
-│       │   │   ├── SpawnerData.java
-│       │   │   └── UpgradeType.java
-│       │   ├── service/
-│       │   │   ├── EconomyService.java
-│       │   │   ├── ItemFactory.java
-│       │   │   ├── LinkService.java
-│       │   │   ├── MessageService.java
-│       │   │   └── SpawnerManager.java
-│       │   ├── storage/
-│       │   │   └── SpawnerStorage.java
-│       │   └── util/
-│       │       └── Keys.java
-│       └── resources/
-│           ├── config.yml
-│           ├── messages.yml
-│           └── plugin.yml
-├── pom.xml
-├── build.gradle
-├── settings.gradle
-├── LICENSE.md
-├── LICENSE_pt.md
-└── README.md
-```
+- ☕ Java 25
+- 📦 Maven
+- 🗺️ Paper 26.2
+- 💰 Vault API (economia, opcional)
+- 🧩 PlaceholderAPI (opcional)
 
 ---
 
@@ -114,39 +64,40 @@ AdvancedCustomSpawners/
 
 ### 📦 Requisitos
 
-* Servidor Paper para Minecraft 1.21.8
-* Java 21 ou superior
-* (Opcional) Vault + plugin de economia, e/ou PlaceholderAPI
+- Servidor **Paper 26.2**
+- **Java 25** ou superior
+- (Opcional) Vault + plugin de economia, e/ou PlaceholderAPI
 
----
+> ℹ️ A partir da versão **2.0.0** o plugin suporta apenas o Minecraft 26.2 (Paper). A linha 1.x, feita para o 1.21.8, não recebe mais suporte.
 
-### ⚙️ Instalação
+### ⬇️ Instalação
 
-```bash
-# Clonar o repositório
-git clone https://github.com/Henrique02W/AdvancedCustomSpawners.git
+1. Baixe o `.jar` mais recente em [Releases](https://github.com/Henrique02W/AdvancedCustomSpawners/releases/latest)
+2. Coloque o arquivo na pasta `plugins/` do servidor
+3. Inicie o servidor e edite `plugins/AdvancedCustomSpawners/config.yml` e `messages.yml`
+4. Use `/spawner reload` para aplicar mudanças
 
-# Entrar na pasta
-cd AdvancedCustomSpawners
+### 🔄 Atualizando da versão 1.x (1.21.8)
+
+- Faça backup da pasta `plugins/AdvancedCustomSpawners/` (principalmente o `data.yml`).
+- O nome do plugin, as chaves internas e o formato do `data.yml` não mudaram, então spawners e itens existentes devem continuar sendo reconhecidos. Teste com uma cópia do servidor antes de atualizar o de produção.
+- Atualize o servidor para Paper 26.2 com Java 25 e troque o `.jar` pela versão 2.x.
+
+### 🔨 Compilando a partir do código
+
+Requer **JDK 25** e Maven.
+
 ```
-
-Compile com Maven:
-
-```bash
+git clone https://github.com/Henrique02W/AdvancedCustomSpawners.git
+cd AdvancedCustomSpawners
 mvn package
 ```
 
-O jar será gerado em `target/AdvancedCustomSpawners-1.0.0.jar`. Ou, com Gradle:
-
-```bash
-gradle build
-```
-
-Coloque o arquivo gerado na pasta `/plugins` do seu servidor.
+O jar será gerado em `target/AdvancedCustomSpawners-<versão>.jar`.
 
 ---
 
-### 🔑 Configuração
+## 🔑 Configuração
 
 Edite `config.yml` para ajustar comportamento geral, combustíveis e upgrades:
 
@@ -186,66 +137,90 @@ Todos os mobs vivos e "spawnáveis" são permitidos por padrão — adicione em 
 
 ---
 
-### ▶️ Executando
-
-1. Coloque o jar em `plugins/`
-2. Inicie o servidor Paper 1.21.8
-3. Edite `plugins/AdvancedCustomSpawners/config.yml` e `messages.yml`
-4. Use `/spawner reload`
-
----
-
 ## 🧠 Uso
 
-* `/spawner give <player> <mob> [amount]` — entrega spawner customizado
-* `/spawner give <player> <mob> [amount] egg` — entrega capturador de mob já preenchido
-* `/spawner giveempty <player> [amount]` — entrega capturador vazio
-* `/spawner reload` — recarrega as configurações
-* `/spawner info` — mostra dados do spawner mirado
-* `/spawner link` — inicia vínculo do spawner mirado com um container
-* `/spawner unlink` — remove o vínculo
-* `/spawner remove` — remove o spawner mirado e devolve ao jogador
+O comando principal é `/spawner` (aliases: `/customspawner`, `/acs`).
+
+- `/spawner give <player> <mob> [amount]` — entrega spawner customizado
+- `/spawner give <player> <mob> [amount] egg` — entrega capturador de mob já preenchido
+- `/spawner giveempty <player> [amount]` — entrega capturador vazio
+- `/spawner reload` — recarrega as configurações
+- `/spawner info` — mostra dados do spawner mirado
+- `/spawner link` — inicia vínculo do spawner mirado com um container
+- `/spawner unlink` — remove o vínculo
+- `/spawner remove` — remove o spawner mirado e devolve ao jogador
 
 A GUI possui um botão para ligar/desligar o spawner. O upgrade **Condições** faz o plugin ignorar regras ambientais do vanilla (luz, tipo de bloco, água, dia/noite), usando spawn direto controlado pelo próprio sistema.
 
 ### Permissões
 
-| Permissão | Descrição | Padrão |
-|---|---|---|
-| `advancedspawners.use` | Permite usar as GUIs de spawner customizado | `true` |
-| `advancedspawners.give` | Permite entregar spawners e capturadores | `op` |
-| `advancedspawners.reload` | Permite recarregar a configuração | `op` |
-| `advancedspawners.info` | Permite ler informações do spawner | `op` |
+| Permissão                 | Descrição                                   | Padrão |
+| ------------------------- | ------------------------------------------- | ------ |
+| `advancedspawners.use`    | Permite usar as GUIs de spawner customizado | `true` |
+| `advancedspawners.give`   | Permite entregar spawners e capturadores    | `op`   |
+| `advancedspawners.reload` | Permite recarregar a configuração           | `op`   |
+| `advancedspawners.info`   | Permite ler informações do spawner          | `op`   |
 | `advancedspawners.remove` | Permite remover spawners via GUI ou comando | `true` |
-| `advancedspawners.link` | Permite vincular spawners a containers | `true` |
-| `advancedspawners.admin` | Acesso a todos os comandos administrativos | `op` |
+| `advancedspawners.link`   | Permite vincular spawners a containers      | `true` |
+| `advancedspawners.bypass` | Ignora algumas restrições de tipo/colocação | `op`   |
+| `advancedspawners.admin`  | Acesso a todos os comandos administrativos  | `op`   |
 
 ### Placeholders
 
 Com PlaceholderAPI instalado:
 
-* `%advancedspawners_total%`
-* `%advancedspawners_stored_items%`
-* `%advancedspawners_pending_routes%`
+- `%advancedspawners_total%`
+- `%advancedspawners_stored_items%`
+- `%advancedspawners_pending_routes%`
+
+---
+
+## 📂 Estrutura do Projeto
+
+```
+AdvancedCustomSpawners/
+├── .github/
+│   ├── workflows/            # CI (build) e release por tag
+│   └── dependabot.yml
+├── src/main/
+│   ├── java/io/github/henrique02w/advancedcustomspawners/
+│   │   ├── AdvancedCustomSpawnersPlugin.java
+│   │   ├── command/          # /spawner
+│   │   ├── config/           # leitura do config.yml
+│   │   ├── gui/              # menus e cliques
+│   │   ├── hologram/         # hologramas (TextDisplay)
+│   │   ├── integration/      # PlaceholderAPI
+│   │   ├── listener/         # eventos de spawner, blocos e mobs
+│   │   ├── model/            # dados dos spawners
+│   │   ├── service/          # itens, economia, links, mensagens, gerenciador
+│   │   ├── storage/          # persistência (data.yml)
+│   │   └── util/
+│   └── resources/            # config.yml, messages.yml, plugin.yml
+├── pom.xml
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE.md / LICENSE_pt.md
+└── README.md / README.en.md
+```
 
 ---
 
 ## 🔒 Licença
 
-Este projeto está sob uma **Licença Personalizada Não Comercial**.
+Este projeto está sob a **Custom Non-Commercial Software License v1.0** (texto completo em [`LICENSE.md`](LICENSE.md), com versão em português em [`LICENSE_pt.md`](LICENSE_pt.md)).
 
 ⚠️ **Uso comercial é estritamente proibido.**
 
 Você pode:
 
-* Usar para fins pessoais
-* Usar para fins educacionais
-* Fazer forks e modificar
+- Usar para fins pessoais
+- Usar para fins educacionais
+- Fazer forks e modificar
 
 Você NÃO pode:
 
-* Vender o plugin
-* Monetizar qualquer parte do projeto
+- Vender o plugin
+- Monetizar qualquer parte do projeto
 
 📩 Para uso comercial, entre em contato com o autor.
 
@@ -253,15 +228,15 @@ Você NÃO pode:
 
 ## 🤝 Contribuindo
 
-Contribuições são bem-vindas!
+Contribuições são bem-vindas! Veja o [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## 🐛 Problemas (Issues)
 
 Encontrou um bug ou tem uma sugestão?
 
-* Abra uma issue
-* Descreva o problema claramente
-* Envie logs ou prints, se possível
+- Abra uma [issue](https://github.com/Henrique02W/AdvancedCustomSpawners/issues)
+- Descreva o problema claramente e informe a versão do Paper e do plugin
+- Envie logs ou prints, se possível
 
 ---
 
@@ -269,8 +244,8 @@ Encontrou um bug ou tem uma sugestão?
 
 👤 **Henrique02W**
 
-* GitHub: https://github.com/Henrique02W
-* Discord: henrique02#7075
+- GitHub: <https://github.com/Henrique02W>
+- Discord: henrique02#7075
 
 ---
 
@@ -278,9 +253,9 @@ Encontrou um bug ou tem uma sugestão?
 
 Se você gostou:
 
-* ⭐ Dê uma estrela no repositório
-* 🍴 Faça um fork
-* 📢 Compartilhe com outras pessoas
+- ⭐ Dê uma estrela no repositório
+- 🍴 Faça um fork
+- 📢 Compartilhe com outras pessoas
 
 ---
 
